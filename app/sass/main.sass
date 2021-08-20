@@ -1,0 +1,1505 @@
+@import  ../includes/sass/variables
+@import  ../includes/sass/reductions
+@import  ../includes/sass/fonts
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  list-style-type: none
+  text-decoration: none
+  font-family: $main-font
+  font-weight: 300
+  color: $main-color
+
+
+.hidden-wrap
+  right: 15px
+  top: 25px
+  z-index: 21
+
+
+.sidenav
+  height: 100%
+  width: 0
+  position: fixed
+  z-index: 20
+  top: 0
+  right: 0
+  background-color: rgb(255, 255, 255)
+  overflow-x: hidden
+  padding-top: 100px
+  transition: all 0.5s
+  text-align: right
+  box-shadow: -10px 0 30px rgb(0 0 0 / 55%)
+
+
+  &_open
+    width: 200px
+    padding: 100px 20px 40px
+
+  &_close
+    width: 0!important
+
+
+.sidenav__link
+  padding: 8px 8px 8px 32px
+  text-decoration: none
+  font-size: 18px
+  color: $main-color
+  display: block
+  transition: opacity 0.3s
+  height: 50px
+  text-align: center
+
+  &:hover
+    opacity: 0.8
+
+
+
+.sidenav .closebtn
+  position: fixed
+  top: 0
+  right: 0
+  width: 100%
+  height: 70px
+  z-index: 22
+
+
+.main
+  transition: margin-right .5s
+  &_open
+    margin-right: 300px
+  &_close
+    margin-right: 0
+
+
+.container
+  display: flex
+  height: 100%
+  box-sizing: content-box
+  max-width: 1200px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+
+
+.main-wrapper
+  min-height: 100vh
+
+
+.wrapper
+  max-width: 4000px
+  width: 100%
+
+  &_cube
+    width: 100%
+    background: url(../img/bg-pattern.png)
+    background-size: 100%
+
+  &_reversed
+    background: url(../img/fill_pattern_right_bg2.jpg) no-repeat
+    background-size: cover
+
+  &_main
+    background: url(../img/fill_pattern_right_bg.jpg) no-repeat
+    background-size: cover
+    width: 100%
+    overflow: hidden
+
+  &_header
+    width: 100%
+    background: #ffffffcf
+    z-index: 3
+    box-shadow: 0 0 4px #000
+    height: 70px
+
+  &_footer
+    margin-top: auto
+    box-shadow: 0 0 4px #000
+
+  &_blue
+    background: $blue-color
+
+  &_dark
+    background: $dark-blue-color
+    background-size: contain
+
+  &_yellow
+    background: url(../img/bg-right-1.png) no-repeat right, url(../img/bg-left-1.png) no-repeat left $yel-green-color
+    background-size: contain
+
+
+.contacts
+  position: fixed
+  gap: 20px
+  right: 15px
+  top: calc(50% - 57.5px)
+
+  &_header
+    position: static
+    margin-right: 40px
+
+    &.contacts-link
+      opacity: 1
+      width: auto
+      height: auto
+      font-size: 13px
+
+    &.contacts-link__svg
+      margin-right: 10px
+
+
+  &_abs
+    z-index: 3
+    gap: 0
+
+
+  &_abs .contacts-link
+    color: #3d3d3d
+    font-size: 16px
+
+
+  &-link__wrap
+    transition: all 0.3s
+    padding: 10px
+    background: #fff
+    border-radius: 50px
+    box-shadow: rgb(0 0 0 / 50%) 0 0 2px 2px
+
+
+  &-link__wrap:not(:last-child)
+    margin-bottom: 10px
+
+
+  &-link
+    color: $dark-blue-color
+    font-weight: 700
+    font-size: 14px
+    font-family: $secondary-font
+    letter-spacing: 0.06rem
+
+
+  &_abs .contacts-link
+    opacity: 0
+    width: 0
+    height: 0
+
+
+
+
+  &-link:active,
+  &-link:hover,
+  &-link:focus
+    color: $yellow-color
+
+
+  &-link__svg_tg,
+  &-link__svg_mail,
+  &-link__svg_phone
+    background-size: contain !important
+    cursor: pointer
+    transition: all 0.3s
+
+
+
+  &-link__svg_tg
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cdefs%3E%3CclipPath id='A'%3E%3Cpath d='M15.903 131.998c0-65.17 52.83-118 118-118s118 52.83 118 118-52.83 118-118 118-118-52.83-118-118'/%3E%3C/clipPath%3E%3ClinearGradient x1='133.903' y1='13.999' x2='133.903' y2='249.999' gradientUnits='userSpaceOnUse' spreadMethod='pad' id='B'%3E%3Cstop offset='0' stop-color='%231d93d2'/%3E%3Cstop offset='1' stop-color='%2338b0e3'/%3E%3C/linearGradient%3E%3CclipPath id='C'%3E%3Cpath d='M0 265.9h266.987V0H0z'/%3E%3C/clipPath%3E%3CclipPath id='D'%3E%3Cpath d='M0 265.9h266.987V0H0z'/%3E%3C/clipPath%3E%3CclipPath id='E'%3E%3Cpath d='M0 265.9h266.987V0H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg transform='matrix(.271187 0 0 -.271187 -4.312678 67.796339)'%3E%3Cpath d='M15.903 131.998c0-65.17 52.83-118 118-118s118 52.83 118 118-52.83 118-118 118-118-52.83-118-118' fill='url(%23B)' clip-path='url(%23A)'/%3E%3Cg clip-path='url(%23C)'%3E%3Cpath d='M95.778 123.374l14-38.75S111.528 81 113.403 81s29.75 29 29.75 29l31 59.875-77.875-36.5z' fill='%23c8daea'/%3E%3C/g%3E%3Cg clip-path='url(%23D)'%3E%3Cpath d='M114.34 113.436l-2.688-28.562s-1.125-8.75 7.625 0 17.125 15.5 17.125 15.5' fill='%23a9c6d8'/%3E%3C/g%3E%3Cg clip-path='url(%23E)'%3E%3Cpath d='M96.03 121.99l-28.795 9.383s-3.437 1.395-2.333 4.562c.228.653.687 1.208 2.062 2.167 6.382 4.447 118.104 44.604 118.104 44.604s3.155 1.062 5.02.356c.852-.323 1.396-.688 1.854-2.02.167-.485.263-1.516.25-2.542-.01-.74-.1-1.425-.166-2.5-.68-10.98-21.04-92.918-21.04-92.918s-1.218-4.795-5.583-4.958c-1.592-.06-3.524.263-5.834 2.25-8.565 7.368-38.172 27.265-44.713 31.64-.37.246-.474.567-.537.88-.092.46.4 1.034.4 1.034s51.552 45.825 52.924 50.633c.106.373-.293.557-.834.396-3.424-1.26-62.78-38.74-69.33-42.88-.383-.242-1.457-.086-1.457-.086' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat
+    width: 35px
+    height: 35px
+
+
+  &-link__svg_mail
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' id='Layer_1' style='enable-background:new 0 0 128 128;' version='1.1' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23267CB5;%7D .st1%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Ccircle class='st0' cx='64' cy='64' r='64'/%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath class='st1' d='M64,28'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath class='st1' d='M64,72.4l38.2-32.7c-0.6-0.4-1.4-0.7-2.2-0.7H28c-0.8,0-1.6,0.3-2.2,0.7L64,72.4z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M66.6,75.4c-1.5,1.3-3.7,1.3-5.2,0L24,43.5V85c0,2.2,1.8,4,4,4h72c2.2,0,4-1.8,4-4V43.4L66.6,75.4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat
+    top: -1px
+    width: 35px
+    height: 35px
+
+
+
+  &-link__svg_phone
+    width: 35px
+    height: 35px
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' id='katman_1' style='enable-background:new 0 0 512 512;' version='1.1' viewBox='0 0 512 512' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%2335495E;%7D .st1%7Bfill:%232C3E50;%7D .st2%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Ccircle class='st0' cx='256' cy='256' r='250'/%3E%3C/g%3E%3Cpath class='st1' d='M460.9,399.2c-0.5-0.5-0.9-0.9-1.3-1.3c-40-40-80.1-80.1-120.1-120.1c-55.1-55.1-110.2-110.1-165.2-165.3 c-7.6-7.6-19.5-8.2-27.4-0.1c-4.9,5-9.8,9.8-14.7,14.8c-4.7,4.8-6.6,10.5-5.3,17.1c0.2,1,0.1,1.7-0.7,2.4c-0.4,0.4-0.8,0.8-1.2,1.2 c-10.6,10-15.9,22.6-17.6,36.9c-1.3,10.8-0.5,21.5,1.6,32.2c3.2,16,8.9,31.1,16.3,45.7c13.5,26.6,31.2,50,52.2,71 c52.5,52.7,105.2,105.2,157.8,157.8c0.3,0.3,0.7,0.7,1,1c0.1,0.2,0.3,0.3,0.4,0.4C387.4,475.4,430.8,442.3,460.9,399.2z'/%3E%3Cpath class='st2' d='M400.6,339.3l-60-60c-7.2-7.2-18.8-7.2-26,0L299,294.9c-4.9,4.9-6.4,11.9-4.6,18.1l-5.9,5.9c0,0,0,0,0,0 c-4.2,4.2-30.2-2.2-61.7-33.7c-31.5-31.5-37.9-57.5-33.7-61.7c0,0,0,0,0,0l5.9-5.9c1.7,0.5,3.4,0.7,5.1,0.7c4.7,0,9.4-1.8,13-5.4 l15.6-15.6c7.2-7.2,7.2-18.8,0-26l-60-60c-3.5-3.5-8.1-5.4-13-5.4c-4.9,0-9.5,1.9-13,5.4L131.1,127c-4.9,4.9-6.4,11.9-4.6,18.1 c0,0-5,5-5.2,5.4c-16.6,18.5-19.7,47.5-8.7,82.2c10.8,34,34,70,65.4,101.4c31.4,31.4,67.4,54.6,101.4,65.4 c13.7,4.3,26.4,6.5,38,6.5c19,0,34.9-5.8,46.3-17.1l3.3-3.3c1.6,0.5,3.4,0.7,5.1,0.7c4.9,0,9.5-1.9,13-5.4l15.6-15.6 C407.8,358.2,407.8,346.5,400.6,339.3z M159.7,118l66.4,66.4l-22,22L137.7,140L159.7,118z M353.8,379.1 c-8.7,8.7-21.2,13.1-36.5,13.1c-10.1,0-21.5-1.9-33.8-5.8c-31.9-10.1-66-32.1-95.8-62c-29.9-29.9-51.9-63.9-62-95.8 c-9.8-30.9-7.2-55.9,7.3-70.3l4.8-4.8l52.9,52.9l-7.6,7.6c-15.3,15.5,6,53.4,33.8,81.2c23.6,23.6,50.1,38.8,67.4,38.8 c5.8,0,10.4-1.7,13.8-5l7.5-7.5l52.9,52.9L353.8,379.1z M377.7,368.7c-3.2,3.2-3.8,3.8-5.3,3.8c-0.2,0-0.3,0-0.5,0l-1.7-0.1 l-64.4-64.4l22-22l66.4,66.4L377.7,368.7z'/%3E%3C/g%3E%3C/svg%3E")
+
+  &-link__svg_m
+    margin-right: 5px
+    width: 28px
+    height: 28px
+
+
+  &-link__wrap:hover .contacts-link,
+  &-link__wrap:hover .contacts-link,
+  &-link__wrap:hover .contacts-link,
+  &-link__wrap:focus .contacts-link,
+  &-link__wrap:focus .contacts-link,
+  &-link__wrap:focus .contacts-link,
+  &-link__wrap:active .contacts-link,
+  &-link__wrap:active .contacts-link,
+  &-link__wrap:active .contacts-link
+    opacity: 1
+    width: auto
+    height: auto
+
+
+  &-link__wrap:hover .contacts-link__svg,
+  &-link__wrap:hover .contacts-link__svg,
+  &-link__wrap:hover .contacts-link__svg,
+  &-link__wrap:focus .contacts-link__svg,
+  &-link__wrap:focus .contacts-link__svg,
+  &-link__wrap:focus .contacts-link__svg,
+  &-link__wrap:active .contacts-link__svg,
+  &-link__wrap:active .contacts-link__svg,
+  &-link__wrap:active .contacts-link__svg
+    margin-left: 20px
+    transform: scale(1.5)
+
+
+  &-link__wrap_header .contacts-link_mail,
+  &-link__wrap_header .contacts-link__svg_mail,
+  &-link__wrap_header .contacts-link_tg,
+  &-link__wrap_header .contacts-link__svg_tg
+    display: none
+
+  &-link__wrap_header .contacts-link__svg
+    animation: trambling-animation 2s ease-in-out 0s normal none infinite running
+
+
+  &-link__wrap_header:hover .contacts-link__svg,
+  &-link__wrap_header:hover .contacts-link__svg,
+  &-link__wrap_header:hover .contacts-link__svg,
+  &-link__wrap_header:focus .contacts-link__svg,
+  &-link__wrap_header:focus .contacts-link__svg,
+  &-link__wrap_header:focus .contacts-link__svg,
+  &-link__wrap_header:active .contacts-link__svg,
+  &-link__wrap_header:active .contacts-link__svg,
+  &-link__wrap_header:active .contacts-link__svg
+    margin-left: 0
+
+
+.btn
+  color: $white-color
+  background: #6dcf73
+  background: -moz-linear-gradient(-45deg, #08c1ef 0%, #6dcf73 100%)
+  background: -webkit-gradient(-45deg, color-stop(0%, #08c1ef), color-stop(100%, #6dcf73))
+  background: -webkit-linear-gradient(-45deg, #08c1ef 0%, #6dcf73 100%)
+  background: -o-linear-gradient(-45deg, #08c1ef 0%, #6dcf73 100%)
+  background: linear-gradient(135deg, #08c1ef 0%, #6dcf73 100%)
+  background-size: 400% 400%
+  animation: animate_gradient 5s ease infinite
+
+
+.btn
+  font-family: $main-font
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3
+  border-radius: 4px
+  border-style: solid
+  border-width: 1px
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05)
+  text-decoration: none
+  display: block
+  text-transform: uppercase
+  cursor: pointer
+  font-size: 12px
+  letter-spacing: 0.06rem
+  line-height: 20px
+  padding: 10px 5px
+  text-align: center
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75)
+  vertical-align: middle
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+  -webkit-transition-property: -webkit-transform
+  transition-property: transform
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -webkit-transform: translateZ(0)
+  -ms-transform: translateZ(0)
+  transform: translateZ(0)
+  z-index: 2
+
+  &:before
+    pointer-events: none
+    @include absolute-item
+    z-index: -1
+    top: 100%
+    left: 5%
+    height: 10px
+    width: 90%
+    opacity: 0
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%)
+    -webkit-transition-duration: 0.3s
+    transition-duration: 0.3s
+    -webkit-transition-property: -webkit-transform, opacity
+    transition-property: transform, opacity
+
+  &:hover
+    -webkit-transform: translateY(-5px)
+    -ms-transform: translateY(-5px)
+    transform: translateY(-5px)
+    background: linear-gradient(to bottom, $white-color, #fffbfb) $white-color repeat-x
+    animation: none
+    color: #333333
+
+    &:before
+      opacity: 1
+      -webkit-transform: translateY(5px)
+      -ms-transform: translateY(5px)
+      transform: translateY(5px)
+
+  &_head-window
+    animation: animate_gradient 5s ease infinite
+    position: fixed
+    right: 15px
+    bottom: 5%
+    z-index: 3
+
+
+
+
+
+@keyframes animate_gradient
+  0%
+    background-position: 0 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0 50%
+
+
+@keyframes trambling-animation
+  0%, 50%, 100%
+    transform: rotate(0deg)
+
+
+  10%, 30%
+    transform: rotate(-5deg)
+
+
+  20%, 40%
+    transform: rotate(5deg)
+
+
+
+.header
+  &-slogan
+    margin: 0
+    text-transform: uppercase
+    font-size: 0.9em
+    font-weight: 600
+    width: fit-content
+    width: -moz-fit-content
+
+    &__bitrix
+      background: url(../img/bitrix24-logo-ru.svg) no-repeat center
+      background-size: contain
+      width: 155px
+      height: 25px
+
+  &-nav
+    gap: 18px
+    margin: 0 30px 0 0
+    padding: 0
+
+    &__link
+      color: $main-color
+      font-weight: 700
+      text-transform: uppercase
+      font-size: 13px
+
+      &:active, &:focus, &:hover
+        color: $blue-color
+
+
+.console
+  &-container
+    background: rgb(255 255 255 / 75%)
+    padding: 40px 0
+    font-size: 4em
+    text-align: center
+    height: fit-content
+    width: 53%
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    text-transform: uppercase
+
+    & span
+      font-family: $secondary-font
+      font-weight: 700
+
+  &-underscore
+    display: inline-block
+    position: relative
+    top: -0.14em
+    left: 10px
+
+
+.head
+  &-window
+    background: url("../img/progress-1.svg") no-repeat left -35px top -45px, url("../img/case-stud-5y-1.png") no-repeat right -35px bottom -65px
+    background-size: contain
+    padding-top: 500px
+
+  &-window__h2
+    font-size: 25px
+
+@keyframes topBar_open
+  0%
+    transform: translateY(0px) rotate(0deg)
+
+  10%
+    transform: translateY(-8px) rotate(0deg)
+
+  50%
+    transform: translateY(25px) rotate(45deg)
+
+  75%
+    transform: translateY(12px) rotate(45deg)
+
+  100%
+    transform: translateY(17px) rotate(45deg)
+
+
+@keyframes bottomBar_open
+  0%
+    transform: translateY(0px) rotate(0deg)
+
+  10%
+    transform: translateY(-8px) rotate(0deg)
+
+  60%
+    transform: translateY(0px) rotate(-45deg)
+
+  75%
+    transform: translateY(-10px) rotate(-45deg)
+
+  100%
+    transform: translateY(-8px) rotate(-45deg)
+
+
+@keyframes menuLabel_open
+  0%
+    transform: translateY(0px)
+    opacity: 1
+  25%
+    transform: translateY(-18px)
+  45%
+    transform: translateY(44px)
+    opacity: 1
+  48%
+    transform: translateY(50px)
+    opacity: 0
+  100%
+    transform: translateY(30px)
+    opacity: 0
+
+
+@keyframes topBar_close
+  0%
+    transform: translateY(17px) rotate(45deg)
+
+
+  35%
+    transform: translateY(-8px) rotate(-4deg)
+
+  53%
+    transform: translateY(10px) rotate(3deg)
+
+  70%
+    transform: translateY(-6px) rotate(0deg)
+
+  100%
+    transform: translateY(-2px) rotate(0deg)
+
+
+@keyframes bottomBar_close
+  0%
+    transform: translateY(-8px) rotate(-45deg)
+
+  35%
+    transform: translateY(-18px) rotate(6deg)
+
+  53%
+    transform: translateY(0px) rotate(-3deg)
+
+  68%
+    transform: translateY(-7px) rotate(0deg)
+
+  100%
+    transform: translateY(0px) rotate(0deg)
+
+
+@keyframes menuLabel_close
+  0%
+    transform: translateY(30px)
+    opacity: 0
+  5%
+    transform: translateY(25px)
+    opacity: 1
+  25%
+    transform: translateY(-30px)
+    opacity: 1
+  37%
+    transform: translateY(-22px)
+    opacity: 1
+  45%
+    transform: translateY(-22px)
+    opacity: 1
+  58%
+    transform: translateY(8px) rotate(-10deg)
+    opacity: 1
+  83%
+    transform: translateY(-6px) rotate(0deg)
+    opacity: 1
+  100%
+    transform: translateY(0px)
+    opacity: 1
+
+
+#menu-btn
+  display: none
+  position: relative
+  text-align: center
+  width: 45px
+  height: 10px
+  cursor: pointer
+  z-index: 2001
+
+  &:before,
+  &:after
+    @include absolute-item
+    width: 100%
+    height: 2px
+    background-color: $dark-blue-color
+    border-radius: 20px
+    transform-origin: center
+
+
+  &:after
+    right: 0
+    top: 7px
+
+
+  .text
+    color: $dark-blue-color
+    @include absolute-item
+    text-transform: uppercase
+    font-size: 12px
+    letter-spacing: 2.5px
+    bottom: -15px
+
+
+    &:hover
+      cursor: pointer
+
+
+  &.open
+    &:before
+      animation: topBar_open $anim_time ease-in-out
+      animation-fill-mode: forwards
+      top: -6px
+
+
+    &:after
+      animation: bottomBar_open $anim_time ease-in-out
+      animation-fill-mode: forwards
+      top: 18px
+
+
+    .text
+      animation: menuLabel_open $anim_time ease-in
+      animation-fill-mode: forwards
+
+
+  &.close
+    &:before
+      animation: topBar_close $anim_time ease-in-out
+      animation-fill-mode: backwards
+
+
+    &:after
+      animation: bottomBar_close $anim_time ease-in-out
+      animation-fill-mode: backwards
+
+
+    .text
+      animation: menuLabel_close $anim_time ease-in
+      animation-fill-mode: backwards
+
+
+.logo
+  width: 120px
+  height: 70px
+  background: url(../img/logo0.png) no-repeat center
+  background-size: contain
+
+  &_footer
+    margin-right: 20px
+
+.head-window
+  background: url("../img/progress-1.svg") no-repeat left -35px top -45px, url("../img/case-stud-5y-1.png") no-repeat right -35px bottom -65px
+  background-size: contain
+  padding-top: 500px
+
+
+  &__h2
+    font-size: 25px
+
+.devices
+  background: url(../img/unnamed.png) no-repeat left
+  height: 300px
+  background-size: cover
+
+
+.bitrix
+  background: url(../img/bitrix24-logo-ru.svg) no-repeat bottom
+
+
+.site
+  background: url(../img/site.png) no-repeat center
+
+
+.site, .devices, .bitrix
+  height: 300px
+  background-size: contain
+
+.site, .devices, .site__description, .w-50
+  width: 50%
+
+
+@keyframes move
+  from
+    transform: translate(-90px, 0%)
+  to
+    transform: translate(90px, 0%)
+
+
+.banner
+  & svg
+    @include absolute-item
+    width: 100%
+    background: transparent
+    height: 6vw
+    top: -8%
+
+    & g > use
+      animation: move 30s linear infinite
+
+      &:nth-child(1)
+        animation-delay: -2s
+        fill: #45b9d6
+
+      &:nth-child(2)
+        animation-delay: -2s
+        animation-duration: 17s
+        fill: #84cb5a
+
+      &:nth-child(3)
+        animation-delay: -4s
+        animation-duration: 10s
+        fill: #0e1548
+
+  &_reversed
+    & svg
+      transform: rotateX(180deg)
+      top: auto
+      bottom: -8%
+
+      & g > use
+
+        &:nth-child(1)
+          animation-delay: -5s
+          fill: $blue-color
+
+        &:nth-child(2)
+          animation-delay: -5s
+          animation-duration: 17s
+          fill: $yel-green-color
+
+        &:nth-child(3)
+          animation-delay: -8s
+          animation-duration: 10s
+          fill: $dark-blue-color
+
+
+.skewed
+  transform: skewY(-5deg)
+
+
+.string
+  background: -webkit-linear-gradient(225deg, rgb(252 0 0), rgb(255 214 10))
+  background: -moz-linear-gradient(225deg, rgb(252 0 0), rgb(255 214 10))
+  background: linear-gradient(225deg, rgb(252 0 0), rgb(255 214 10))
+  width: 100%
+  height: 20rem
+  top: 38%
+  z-index: -1
+
+  &_reversed
+    transform: skewY(5deg)
+    height: 20rem
+    top: 30%
+
+
+  &_main
+    height: 30rem
+    top: 14%
+
+
+.main-span
+  color: $white-color
+  font-size: 55px
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3)
+
+  &_dark
+    color: #333333
+
+.main-ul
+  margin: 0
+  padding-left: 25px
+
+
+.main-li:not(:last-child)
+  margin-bottom: 20px
+
+.main-li__check
+  width: 20px
+  height: 20px
+  left: -25px
+  top: -1px
+  font-size: 14px
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' role='img' focusable='false' aria-hidden='true' viewBox='0 0 14 14'%3E%3Cpath fill='green' d='M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z'/%3E%3C/svg%3E")
+
+
+.main-card__wrap
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(2, 200px)
+  gap: 10px
+
+
+.buy-card, .form, .faq__item, .timeline-item-wrap
+  box-shadow: rgb(0 0 0 / 50%) 0 0 10px 2px
+
+
+label[for=test]
+  display: block
+  -webkit-perspective: 800px
+  perspective: 800px
+
+
+#test, #test1, #test2, #test3
+  display: none
+
+
+.reversible
+  position: relative
+  transform-style: preserve-3d
+  transition: all 0.7s
+
+
+  &__label
+    perspective: 1200
+    -moz-transform: perspective(1200px)
+    transform-style: preserve-3d
+
+    &:hover .reversible,
+    &:focus .reversible,
+    &:active .reversible
+      transform: rotateY(180deg)
+
+
+
+.tile-front, .tile-back
+  backface-visibility: hidden
+  position: absolute
+  left: 0
+  padding: 40px 20px
+  width: 100%
+  height: 100%
+  top: 0
+
+.tile-front
+  transform: rotateY(0deg)
+  top: -20px
+
+
+.tile-back
+  transform: rotateY(-180deg)
+  border-radius: 150px
+  background: $white-color
+  text-align: center
+  display: flex
+  align-items: center
+
+input[type=checkbox]:checked + label .reversible
+  -moz-transform: rotateY(180deg)
+  -webkit-transform: rotateY(180deg)
+  transform: rotateY(180deg)
+
+.pulse
+  animation-name: pulse
+  -webkit-animation-name: pulse
+  animation-duration: 6.5s
+  -webkit-animation-duration: 6.5s
+  animation-iteration-count: infinite
+  -webkit-animation-iteration-count: infinite
+
+
+@keyframes pulse
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  10%
+    transform: translate(-1px, -1px) rotate(-1deg)
+
+  20%
+    transform: translate(-2px, 0px) rotate(1deg)
+
+  30%
+    transform: translate(2px, 2px) rotate(-1deg)
+
+  40%
+    transform: translate(1px, -1px) rotate(1deg)
+
+  50%
+    transform: translate(-1px, 2px) rotate(-1deg)
+
+  60%
+    transform: translate(-2px, 1px) rotate(0deg)
+
+  70%
+    transform: translate(2px, 1px) rotate(-1deg)
+
+  80%
+    transform: translate(-1px, -1px) rotate(1deg)
+
+  90%
+    transform: translate(1px, 0px) rotate(0deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(0deg)
+
+
+
+.main-card
+  padding: 25px
+  color: #fff
+  border-radius: 20px
+  font-size: 19px
+  background: #6dcf73
+  background: -moz-linear-gradient(-45deg, #08c1ef 0%, #6dcf73 100%)
+  background: -webkit-gradient(-45deg, color-stop(0%, #08c1ef), color-stop(100%, #6dcf73))
+  background: -webkit-linear-gradient(-45deg, #08c1ef 0%, #6dcf73 100%)
+  background: -o-linear-gradient(-45deg, #08c1ef 0%, #6dcf73 100%)
+  background: linear-gradient(135deg, #08c1ef 0%, #6dcf73 100%)
+  background-size: 400% 400%
+  animation: animate_gradient 5s ease infinite
+  height: 100%
+  cursor: pointer
+  box-shadow: 0 0 5px #000
+
+
+  &__icon
+    width: 70px
+    height: 70px
+    background: no-repeat
+    background-size: cover
+
+    &_binoculars
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' id='Layer_1' style='enable-background:new 0 0 128 128;' version='1.1' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23267CB5;%7D .st1%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Ccircle class='st0' cx='64' cy='64' r='64'/%3E%3Cg%3E%3Cpath class='st1' d='M32.5,43H104c0-2.2-1.8-4-4-4H47.5l-1.3-2.1c-0.7-1.2-2-1.9-3.4-1.9H28c-2.2,0-4,1.8-4,4v20v25.7l4.6-38.1 C28.8,44.5,30.5,43,32.5,43z'/%3E%3Cpath class='st1' d='M108.5,47h-72c-2,0-3.7,1.5-4,3.5l-5,42c-0.3,2.4,1.6,4.5,4,4.5h71.9c2,0,3.7-1.5,4-3.5l5-42 C112.7,49.1,110.9,47,108.5,47z'/%3E%3C/g%3E%3C/svg%3E")
+
+    &_cogs
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.0' width='512px' height='512px' viewBox='0 0 3029.000000 3029.000000' preserveAspectRatio='xMidYMid meet' class=''%3E%3Cg%3E%3Cg transform='translate(0.000000,3029.000000) scale(0.100000,-0.100000)' fill='%23000000' stroke='none'%3E%3Cpath d='M14638 30279 c-3613 -119 -7016 -1504 -9703 -3948 -206 -187 -789 -770 -976 -976 -1707 -1877 -2897 -4093 -3508 -6530 -621 -2481 -599 -5145 65 -7615 496 -1849 1342 -3590 2489 -5125 982 -1314 2177 -2467 3527 -3403 2114 -1464 4560 -2361 7118 -2612 1072 -104 2208 -94 3275 31 5056 591 9485 3703 11770 8269 841 1679 1353 3469 1530 5345 78 833 85 1756 20 2610 -179 2336 -901 4598 -2109 6610 -516 858 -1101 1644 -1790 2405 -193 214 -815 835 -1021 1020 -1242 1116 -2571 1982 -4045 2635 -2081 922 -4349 1360 -6642 1284z m-4728 -8550 c56 -20 1573 -890 1608 -923 19 -17 40 -43 48 -57 7 -15 60 -215 118 -445 l104 -417 1396 -1396 1396 -1396 -153 -153 -152 -152 -1436 1438 c-882 882 -1440 1449 -1447 1467 -6 17 -55 203 -107 415 -62 249 -102 391 -113 401 -17 17 -1279 739 -1291 739 -3 0 -149 -143 -323 -317 l-317 -318 372 -652 371 -652 404 -101 c222 -55 416 -107 431 -115 14 -7 669 -658 1456 -1444 l1430 -1431 -153 -152 -152 -153 -1398 1397 -1397 1397 -405 101 c-223 55 -421 108 -442 116 -20 9 -50 30 -67 48 -48 49 -931 1603 -932 1640 -2 60 3 91 21 131 27 60 942 968 990 982 48 15 101 15 140 2z m9600 -5 c146 -17 297 -45 372 -70 102 -33 163 -147 138 -256 -12 -52 -21 -62 -714 -756 l-701 -702 180 -541 180 -540 540 -179 540 -180 690 690 c531 531 700 694 735 709 107 48 226 6 280 -99 21 -41 63 -241 81 -385 19 -146 16 -483 -5 -635 -96 -711 -460 -1332 -1028 -1756 -364 -272 -803 -446 -1257 -499 -225 -27 -525 -18 -746 20 l-80 14 -567 -567 c-313 -312 -568 -571 -568 -577 0 -6 115 -125 256 -265 140 -140 264 -271 273 -290 28 -54 34 -108 17 -164 -12 -38 -33 -67 -99 -135 -107 -109 -131 -154 -131 -241 0 -138 104 -242 244 -242 81 0 122 22 219 116 129 126 203 151 306 102 41 -19 308 -282 1411 -1387 960 -961 1380 -1389 1423 -1448 162 -221 264 -448 321 -717 31 -144 38 -429 16 -584 -41 -280 -130 -511 -285 -741 -487 -724 -1426 -980 -2218 -604 -96 45 -223 124 -328 203 -98 73 -2782 2760 -2805 2808 -24 49 -26 130 -5 181 8 19 53 74 99 122 48 48 94 106 105 131 39 86 23 182 -43 257 -52 59 -104 83 -181 83 -84 0 -130 -24 -233 -124 -94 -91 -138 -116 -199 -116 -94 0 -101 5 -391 293 l-272 272 -572 -572 -571 -571 16 -101 c89 -533 8 -1076 -233 -1566 -128 -262 -273 -468 -474 -674 -402 -412 -885 -663 -1466 -762 -117 -20 -171 -23 -400 -23 -303 -1 -404 10 -656 74 -193 49 -311 93 -509 190 -418 204 -762 506 -1025 901 -289 435 -433 915 -433 1444 0 529 144 1009 433 1444 263 394 605 696 1025 902 196 96 314 139 509 189 249 63 354 75 646 74 242 0 319 -6 485 -39 29 -6 124 88 2420 2384 l2389 2390 -17 108 c-86 540 -5 1075 237 1568 397 809 1178 1351 2081 1444 137 14 402 12 545 -5z' data-original='%23000000' class='active-path' data-old_color='%238e849e' fill='%238e849e'/%3E%3Cpath d='M19050 21303 c-312 -30 -575 -106 -835 -242 -468 -243 -833 -652 -1025 -1148 -94 -243 -141 -497 -141 -768 -1 -182 10 -294 42 -445 31 -146 33 -166 19 -217 -12 -45 -147 -182 -2519 -2557 -1752 -1753 -2518 -2514 -2546 -2527 -53 -25 -107 -24 -250 5 -382 78 -761 55 -1135 -70 -711 -236 -1251 -819 -1435 -1549 -127 -502 -70 -1040 160 -1504 117 -236 238 -406 414 -582 561 -561 1371 -776 2137 -569 766 206 1369 827 1558 1601 45 186 59 309 59 519 0 202 -14 327 -54 500 -22 93 -20 140 11 198 29 57 5006 5028 5052 5047 51 21 99 19 241 -10 327 -65 656 -59 968 20 622 158 1138 576 1419 1150 163 333 235 670 222 1045 l-2 55 -602 -602 c-592 -590 -604 -601 -653 -611 -29 -6 -66 -7 -86 -3 -19 4 -338 109 -709 232 -649 216 -676 225 -716 264 -41 40 -43 46 -273 735 -127 382 -231 708 -231 724 0 89 -11 77 617 706 326 328 593 599 593 603 0 7 -229 7 -300 0z m-1345 -3713 l150 -150 -2400 -2400 -2400 -2400 -152 152 -153 153 2397 2397 c1319 1319 2400 2398 2403 2398 3 0 73 -68 155 -150z m-5590 -5039 c22 -10 52 -31 67 -47 46 -50 705 -1158 712 -1199 4 -21 4 -55 1 -77 -7 -42 -664 -1148 -713 -1202 -15 -16 -45 -37 -67 -47 -38 -18 -80 -19 -745 -19 -664 0 -707 2 -745 19 -22 10 -50 29 -62 42 -12 13 -176 281 -365 594 l-343 570 0 80 0 80 343 570 c189 314 353 581 365 594 12 13 40 32 62 42 38 17 81 19 745 19 665 0 707 -1 745 -19z' data-original='%23000000' class='active-path' data-old_color='%238e849e' fill='%238e849e'/%3E%3Cpath d='M10833 12128 c-22 -29 -506 -842 -510 -857 -2 -9 113 -209 255 -446 l258 -430 535 -2 534 -3 260 435 c143 240 259 439 258 443 0 4 -117 201 -260 439 l-258 432 -531 1 c-414 0 -534 -3 -541 -12z' data-original='%23000000' class='active-path' data-old_color='%238e849e' fill='%238e849e'/%3E%3Cpath d='M16320 14165 l-935 -935 177 -177 176 -176 41 32 c58 46 174 97 263 115 355 73 703 -148 795 -504 21 -85 21 -235 -1 -320 -20 -78 -63 -172 -107 -236 l-32 -47 1259 -1258 c693 -693 1266 -1259 1274 -1259 16 0 1870 1849 1870 1865 0 5 -568 577 -1261 1271 l-1262 1262 -46 -33 c-61 -43 -112 -69 -197 -97 -58 -19 -89 -23 -199 -23 -116 0 -138 3 -210 28 -44 16 -106 44 -137 63 -334 203 -430 647 -208 969 16 24 30 47 30 52 0 12 -333 343 -345 343 -6 0 -431 -421 -945 -935z m2633 -2313 l1087 -1087 -155 -155 -155 -155 -1090 1090 -1090 1090 152 152 c84 84 155 153 158 153 3 0 494 -489 1093 -1088z' data-original='%23000000' class='active-path' data-old_color='%238e849e' fill='%238e849e'/%3E%3Cpath d='M20477 10022 c-466 -466 -847 -850 -847 -854 0 -10 110 -43 213 -65 115 -25 380 -24 497 0 415 88 761 354 940 722 142 293 173 636 83 945 -13 47 -27 88 -31 92 -4 4 -389 -374 -855 -840z' data-original='%23000000' class='active-path' data-old_color='%238e849e' fill='%238e849e'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+
+    &_mon
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' x='0px' y='0px' width='110px' height='110px' viewBox='0 0 110 110' style='enable-background:new 0 0 110 110;' xml:space='preserve'%3E%3Cg id='Artboard'%3E%3C/g%3E%3Cg id='Multicolor'%3E%3Ccircle style='fill:%23FF8000;' cx='55' cy='55' r='55'/%3E%3Cg%3E%3Cg%3E%3Cpath style='fill:%23FFFFFF;' d='M23,26.84c0-2.121,1.719-3.84,3.84-3.84H55l16,13.44v46.72c0,2.121-1.719,3.84-3.84,3.84H26.84 C24.719,87,23,85.281,23,83.16V26.84z'/%3E%3Cpath style='fill:%23F0F1F1;' d='M55,23v9.6c0,2.121,1.719,3.84,3.84,3.84H71L55,23z'/%3E%3C/g%3E%3Cpath style='fill:%23E2E4E5;' d='M52,70h10c0.551,0,1-0.448,1-1v-5c0-0.552-0.449-1-1-1H52c-0.551,0-1,0.448-1,1v5 C51,69.552,51.449,70,52,70z'/%3E%3Cpath style='fill:%23B6BCBD;' d='M62,72H52c-1.654,0-3-1.346-3-3v-5c0-1.654,1.346-3,3-3h10c1.654,0,3,1.346,3,3v5 C65,70.654,63.654,72,62,72z M52,63c-0.551,0-1,0.448-1,1v5c0,0.552,0.449,1,1,1h10c0.551,0,1-0.448,1-1v-5c0-0.552-0.449-1-1-1 H52z'/%3E%3Cpath style='fill:%23E2E4E5;' d='M30,70h10c0.551,0,1-0.448,1-1v-5c0-0.552-0.449-1-1-1H30c-0.551,0-1,0.448-1,1v5 C29,69.552,29.449,70,30,70z'/%3E%3Cpath style='fill:%23B6BCBD;' d='M40,72H30c-1.654,0-3-1.346-3-3v-5c0-1.654,1.346-3,3-3h10c1.654,0,3,1.346,3,3v5 C43,70.654,41.654,72,40,72z M30,63c-0.551,0-1,0.448-1,1v5c0,0.552,0.449,1,1,1h10c0.551,0,1-0.448,1-1v-5c0-0.552-0.449-1-1-1 H30z'/%3E%3Cpath style='fill:%239CE5F4;' d='M41,50h10c0.551,0,1-0.448,1-1v-5c0-0.552-0.449-1-1-1H41c-0.551,0-1,0.448-1,1v5 C40,49.552,40.449,50,41,50z'/%3E%3Cg%3E%3Cpolygon style='fill:%23CFD3D4;' points='50.272,52 48.014,52 52.728,61 54.986,61 '/%3E%3C/g%3E%3Cg%3E%3Cpolygon style='fill:%23CFD3D4;' points='41.728,52 37.014,61 39.272,61 43.986,52 '/%3E%3C/g%3E%3Cpath style='fill:%2340C9E7;' d='M51,52H41c-1.654,0-3-1.346-3-3v-5c0-1.654,1.346-3,3-3h10c1.654,0,3,1.346,3,3v5 C54,50.654,52.654,52,51,52z M41,43c-0.551,0-1,0.448-1,1v5c0,0.552,0.449,1,1,1h10c0.551,0,1-0.448,1-1v-5c0-0.552-0.449-1-1-1 H41z'/%3E%3Cg%3E%3Cpath style='fill:%23F4D0A1;' d='M84.144,57.498L62.941,81.466l-5.877,1.21c-0.17-0.818-0.593-1.593-1.267-2.189 c-0.674-0.596-1.495-0.922-2.328-0.991l0.484-5.981l21.203-23.967L84.144,57.498z'/%3E%3C/g%3E%3Cg%3E%3Cpath style='fill:%23059BBF;' d='M84.115,57.473c0.016,0.014,0.017,0.038,0.003,0.054L63.397,80.95 c-0.033,0.038-0.086-0.002-0.062-0.047c0.651-1.2,0.414-2.728-0.653-3.672c-1.126-0.996-2.785-0.995-3.905-0.062 c-0.032,0.027-0.075-0.011-0.052-0.046c0.79-1.225,0.589-2.871-0.537-3.868c-1.079-0.955-2.648-0.993-3.762-0.173 c-0.036,0.027-0.077-0.015-0.047-0.049l20.752-23.458c0.014-0.016,0.038-0.017,0.054-0.003L84.115,57.473z'/%3E%3C/g%3E%3Cg%3E%3Crect x='74.313' y='51.774' transform='matrix(0.749 0.6626 -0.6626 0.749 55.1274 -39.9673)' style='fill:%23000;' width='12' height='2'/%3E%3C/g%3E%3Cg%3E%3Cpath style='fill:%23F79392;' d='M84.996,47.571l-0.09-0.08c-2.457-2.174-6.211-1.944-8.385,0.513l-0.04,0.045L85.469,56 l0.04-0.045C87.683,53.498,87.453,49.744,84.996,47.571z'/%3E%3C/g%3E%3Cg%3E%3Cpath style='fill:red;' d='M84.119,57.527L63.371,80.979c-0.03,0.034-0.077-0.002-0.055-0.042 c0.674-1.205,0.444-2.753-0.634-3.707c-1.124-0.994-2.777-0.995-3.897-0.068c-0.019,0.015-0.041-0.008-0.025-0.026l20.865-23.586 c0.014-0.016,0.038-0.017,0.053-0.003l4.437,3.925C84.131,57.487,84.133,57.511,84.119,57.527z'/%3E%3C/g%3E%3Cg%3E%3Cpath style='fill:%233E3E3F;' d='M57.064,82.675l-3.918,0.807l0.323-3.987c0.833,0.069,1.654,0.395,2.328,0.991 C56.471,81.082,56.894,81.857,57.064,82.675z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+
+    &_bar
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='graph' x='0px' y='0px' viewBox='0 0 1010 1010' enable-background='new 0 0 1010 1010' xml:space='preserve'%3E%3Cg id='graph-graph'%3E%3Cpath id='graph-label' fill='%23FFB933' d='M505,1010c278.875,0,505-226.0859,505-505.0195C1010,226.1255,783.875,0,505,0 C226.106,0,0,226.1255,0,504.9805C0,783.9141,226.106,1010,505,1010z'/%3E%3Cg id='graph-graph_1_'%3E%3Cg%3E%3Cpath fill='%23454545' d='M249.8965,773.8535c-5.5781,0-10.1006-4.5176-10.1006-10.1006V246.2266 c0-5.5821,4.5225-10.0996,10.1006-10.0996c5.5771,0,10.0996,4.5175,10.0996,10.0996v517.5263 C259.9961,769.3359,255.4736,773.8535,249.8965,773.8535L249.8965,773.8535z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M787.7998,756.001H232.0439c-5.5781,0-10.1005-4.5176-10.1005-10.1006 c0-5.582,4.5224-10.0996,10.1005-10.0996h555.7559c5.5781,0,10.1006,4.5176,10.1006,10.0996 C797.9004,751.4834,793.3779,756.001,787.7998,756.001L787.7998,756.001z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,702.0293h-52.4331c-5.5781,0-10.1001-4.5176-10.1001-10.1006s4.522-10.0996,10.1001-10.0996 h52.4331c5.5776,0,10.1001,4.5166,10.1001,10.0996S280.2109,702.0293,274.6333,702.0293L274.6333,702.0293z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,650.8779h-52.4331c-5.5781,0-10.1001-4.5175-10.1001-10.1006 c0-5.582,4.522-10.0996,10.1001-10.0996h52.4331c5.5776,0,10.1001,4.5176,10.1001,10.0996 C284.7334,646.3604,280.2109,650.8779,274.6333,650.8779L274.6333,650.8779z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,599.7266h-52.4331c-5.5781,0-10.1001-4.5176-10.1001-10.0996 c0-5.5831,4.522-10.0997,10.1001-10.0997h52.4331c5.5776,0,10.1001,4.5166,10.1001,10.0997 C284.7334,595.209,280.2109,599.7266,274.6333,599.7266L274.6333,599.7266z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,548.5957h-52.4331c-5.5781,0-10.1001-4.5176-10.1001-10.0996 c0-5.583,4.522-10.1006,10.1001-10.1006h52.4331c5.5776,0,10.1001,4.5176,10.1001,10.1006 C284.7334,544.0781,280.2109,548.5957,274.6333,548.5957L274.6333,548.5957z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,497.4443h-52.4331c-5.5781,0-10.1001-4.5166-10.1001-10.0996 c0-5.583,4.522-10.1006,10.1001-10.1006h52.4331c5.5776,0,10.1001,4.5176,10.1001,10.1006 C284.7334,492.9277,280.2109,497.4443,274.6333,497.4443L274.6333,497.4443z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,446.2939h-52.4331c-5.5781,0-10.1001-4.5175-10.1001-10.1005 c0-5.5821,4.522-10.0997,10.1001-10.0997h52.4331c5.5776,0,10.1001,4.5176,10.1001,10.0997 C284.7334,441.7764,280.2109,446.2939,274.6333,446.2939L274.6333,446.2939z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,395.1426h-52.4331c-5.5781,0-10.1001-4.5176-10.1001-10.0996 c0-5.583,4.522-10.1006,10.1001-10.1006h52.4331c5.5776,0,10.1001,4.5176,10.1001,10.1006 C284.7334,390.625,280.2109,395.1426,274.6333,395.1426L274.6333,395.1426z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,343.9917h-52.4331c-5.5781,0-10.1001-4.5171-10.1001-10.1001 c0-5.5825,4.522-10.0996,10.1001-10.0996h52.4331c5.5776,0,10.1001,4.5171,10.1001,10.0996 C284.7334,339.4746,280.2109,343.9917,274.6333,343.9917L274.6333,343.9917z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M274.6333,292.8408h-52.4331c-5.5781,0-10.1001-4.5176-10.1001-10.1001 c0-5.5825,4.522-10.1001,10.1001-10.1001h52.4331c5.5776,0,10.1001,4.5176,10.1001,10.1001 C284.7334,288.3232,280.2109,292.8408,274.6333,292.8408L274.6333,292.8408z'/%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath fill='%233BAFDA' d='M404.2271,598.8789c0,24.6582-19.983,44.6211-44.6119,44.6211 c-24.6386,0-44.6211-19.9629-44.6211-44.6211c0-24.6191,19.9825-44.6016,44.6211-44.6016 C384.2441,554.2773,404.2271,574.2598,404.2271,598.8789z'/%3E%3Cpath fill='%23454545' d='M359.6152,653.5996c-30.1718,0-54.7216-24.5391-54.7216-54.7207 c0-30.1621,24.5498-54.7021,54.7216-54.7021c30.167,0,54.7119,24.54,54.7119,54.7021 C414.3271,629.0605,389.7822,653.5996,359.6152,653.5996L359.6152,653.5996z M359.6152,564.377 c-19.0361,0-34.5214,15.4853-34.5214,34.5019c0,19.0361,15.4853,34.5215,34.5214,34.5215 c19.0313,0,34.5118-15.4854,34.5118-34.5215C394.127,579.8623,378.6465,564.377,359.6152,564.377L359.6152,564.377z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23FC6E51' d='M511.1846,491.9209c0,24.6387-19.9834,44.6221-44.6216,44.6221 c-24.6284,0-44.6021-19.9834-44.6021-44.6221c0-24.6377,19.9737-44.6211,44.6021-44.6211 C491.2012,447.2998,511.1846,467.2832,511.1846,491.9209z'/%3E%3Cpath fill='%23454545' d='M466.563,546.6426c-30.1621,0-54.7017-24.5401-54.7017-54.7217 c0-30.1611,24.5396-54.7217,54.7017-54.7217c30.1714,0,54.7212,24.5606,54.7212,54.7217 C521.2842,522.1025,496.7344,546.6426,466.563,546.6426L466.563,546.6426z M466.563,457.3994 c-19.0264,0-34.502,15.4854-34.502,34.5215s15.4756,34.5215,34.502,34.5215c19.0361,0,34.5215-15.4854,34.5215-34.5215 S485.5991,457.3994,466.563,457.3994L466.563,457.3994z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23ACAF48' d='M787.7998,465.1523c0,24.6582-19.9727,44.6211-44.6309,44.6211 c-24.6191,0-44.6025-19.9629-44.6025-44.6211c0-24.6386,19.9834-44.6015,44.6025-44.6015 C767.8271,420.5508,787.7998,440.5137,787.7998,465.1523z'/%3E%3Cpath fill='%23454545' d='M743.1689,519.874c-30.1621,0-54.7021-24.54-54.7021-54.7217c0-30.1621,24.54-54.7021,54.7021-54.7021 c30.1768,0,54.7315,24.54,54.7315,54.7021C797.9004,495.334,773.3457,519.874,743.1689,519.874L743.1689,519.874z M743.1689,430.6504c-19.0263,0-34.5019,15.4853-34.5019,34.5019c0,19.0362,15.4756,34.5215,34.5019,34.5215 c19.0411,0,34.5313-15.4853,34.5313-34.5215C777.7002,446.1357,762.21,430.6504,743.1689,430.6504L743.1689,430.6504z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23FFFFFF' d='M627.2061,607.9336c0,24.6377-20.0031,44.6211-44.6319,44.6211 c-24.6378,0-44.6212-19.9834-44.6212-44.6211c0-24.6387,19.9834-44.6221,44.6212-44.6221 C607.2031,563.3115,627.2061,583.2949,627.2061,607.9336z'/%3E%3Cpath fill='%23454545' d='M582.5742,662.6543c-30.1709,0-54.7207-24.5596-54.7207-54.7207 c0-30.1816,24.5498-54.7217,54.7207-54.7217c30.1778,0,54.7324,24.5401,54.7324,54.7217 C637.3066,638.0947,612.752,662.6543,582.5742,662.6543L582.5742,662.6543z M582.5742,573.4121 c-19.0356,0-34.521,15.4844-34.521,34.5215c0,19.0351,15.4854,34.5215,34.521,34.5215c19.042,0,34.5322-15.4864,34.5322-34.5215 C617.1064,588.8965,601.6162,573.4121,582.5742,573.4121L582.5742,573.4121z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M386.2656,573.4121c-2.584,0-5.1679-0.9863-7.1406-2.959c-3.9453-3.9453-3.9453-10.3369,0-14.2822 l44.7197-44.7207c3.9453-3.9453,10.3369-3.9453,14.2823,0c3.9453,3.9453,3.9453,10.3369,0,14.2822l-44.7198,44.7207 C391.4346,572.4258,388.8501,573.4121,386.2656,573.4121L386.2656,573.4121z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M555.9341,582.4463c-2.5845,0-5.1685-0.9863-7.1411-2.959l-53.794-53.7549 c-3.9453-3.9453-3.9453-10.3369-0.0049-14.2822c3.9454-3.9453,10.3413-3.9453,14.2867,0l53.7944,53.7549 c3.9453,3.9453,3.9453,10.3369,0.0049,14.2822C561.1074,581.46,558.5186,582.4463,555.9341,582.4463L555.9341,582.4463z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%23454545' d='M618.2793,591.2637c-2.584,0-5.168-0.9865-7.1406-2.959c-3.9453-3.9453-3.9453-10.336,0-14.2813 l89.2031-89.2431c3.9355-3.9453,10.3379-3.9453,14.2832,0s3.9453,10.3369,0,14.2822l-89.2041,89.2422 C623.4531,590.2773,620.8643,591.2637,618.2793,591.2637L618.2793,591.2637z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+
+
+    &-wrap
+      width: 80px
+      height: 80px
+      background: #FFFFFF
+      box-shadow: 0 0 3px #00000070
+      border-radius: 150px
+      margin-bottom: 30px
+
+
+  &__text
+    font-weight: 700
+    letter-spacing: 0.05em
+    font-family: $secondary-font
+
+
+
+.main-card__text, .faq__span
+  text-shadow: 3px 1px 2px rgb(0 0 0 / 28%)
+  color: $white-color
+
+.card-body
+
+  &__p
+    font-size: 15px
+
+
+.buy-card
+  padding: 30px
+  text-align: center
+  background: #fff
+
+
+  &__header
+    margin-bottom: 10px
+    height: 95px
+
+
+  &__h4
+    font-size: 20px
+    font-weight: 600
+    margin: 0 0 4px
+    font-family: $secondary-font
+
+  &__signature
+    font-size: 14px
+    font-style: italic
+
+
+  &__price
+    font-size: 35px
+    margin-bottom: 8px
+    font-family: $secondary-font
+    font-weight: 500
+
+    &-signature
+      font-size: 16px
+      margin-right: 5px
+
+
+  &__text
+    margin-bottom: 25px
+
+
+  &__btn
+    margin-top: auto
+  &__wrap
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 25px
+
+.main-h2
+  font-size: 1.8rem
+  margin-bottom: 30px
+  font-family: $secondary-font
+  font-weight: 700
+
+  &__wrap
+    background: #fff
+    width: fit-content
+    width: -moz-fit-content
+    padding: 20px
+    margin: 0 auto
+
+    &_end
+      text-align: end
+
+
+  &__wrap .main-h2
+    margin-bottom: 0
+
+
+  &__signature-footnote
+    font-size: 12px
+
+
+.main-h2, .main-h2__signature
+  text-transform: uppercase
+
+
+
+.main-img
+  object-fit: cover
+  width: 100%
+  height: 100%
+
+
+.command
+  gap: 20px
+
+
+.form
+  padding: 30px
+  background: #fff
+  width: 100%
+
+
+  &__input, &__textarea
+    padding: 10px
+    margin-bottom: 20px
+    border: 0
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06)
+    transition: all 0.2s
+    outline: none
+
+
+  &__input:hover, &__textarea:hover
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5)
+
+
+  &__textarea
+    resize: none
+
+
+.buy-card__btn_500
+  margin-top: auto !important
+  width: 400px
+
+
+.faq
+  width: 70%
+  grid-template-columns: auto
+  gap: 20px
+
+
+  &_item
+    background: #fff
+
+
+  &__header
+    padding: 20px
+    cursor: pointer
+    background: linear-gradient(180deg, rgb(252 0 0), rgb(255 214 10))
+
+    &:before
+      cursor: pointer
+      position: absolute
+      right: 20px
+      top: calc(50% - 8px)
+      display: flex
+      width: 20px
+      height: 20px
+      transition: all 0.4s
+      transform: scale(1.5)
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 4v2l-5 5-5-5v-2l5 5z'/%3E%3C/svg%3E")
+
+
+  &__span
+    color: #FFFFFF
+    font-size: 1.3rem
+    font-weight: 500
+
+
+  &__text
+    padding: 20px 20px 20px 60px
+
+
+
+  &__p
+    font-size: 18px
+    margin: 0
+    font-family: $secondary-font
+    &:not(:last-child)
+      margin-bottom: 5px
+
+
+.accordion
+  & input
+    display: none
+    &:checked ~ .accordion__content
+      display: block
+
+    &:checked ~ .faq__header:before
+      transform: rotateX(180deg) scale(1.5)
+      top: calc(50% - 15px)
+
+  &__content
+    display: none
+    background: $white-color
+
+
+
+.timeline-item
+  width: 50px
+  height: 50px
+  background: no-repeat
+  background-size: cover
+  z-index: 2
+
+
+  &:before, &:after
+    @include absolute-item
+
+
+  &:before
+    background: $white-color
+    border-radius: 50px
+    height: 65px
+    width: 65px
+    z-index: 1
+    left: -14px
+    top: -9px
+
+  &:after
+    z-index: 3
+    width: 45px
+    height: 45px
+    background: no-repeat
+    background-size: cover
+
+  &_analysis:after
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' enable-background='new 0 0 128 128' id='Слой_1' version='1.1' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M21.6,109.5c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2-0.1 c0.1,0,0.1,0,0.2-0.1c0.1,0,0.1-0.1,0.2-0.1c0,0,0.1,0,0.1,0s0.1,0,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.1-0.1,0.2-0.1 c0.1,0,0.1-0.1,0.2-0.1c0,0,0.1-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.2c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0.1-0.1c0,0,0-0.1,0.1-0.1 c0,0,0-0.1,0.1-0.1c0,0,0-0.1,0-0.1c0-0.1,0.1-0.1,0.1-0.2c0-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0.1-0.2c0-0.1,0-0.1,0-0.2 c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2 c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1-0.1-0.2c0-0.1,0-0.1-0.1-0.2c0-0.1-0.1-0.1-0.1-0.2c0,0,0-0.1,0-0.1 c0,0,0-0.1-0.1-0.1c0-0.1-0.1-0.1-0.1-0.2c0-0.1-0.1-0.1-0.1-0.2c0-0.1-0.1-0.1-0.1-0.2c0,0-0.1-0.1-0.1-0.1c0,0-0.1-0.1-0.2-0.1 c-0.1,0-0.1-0.1-0.2-0.1c-0.1,0-0.1-0.1-0.2-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c-0.1,0-0.1-0.1-0.2-0.1c-0.1,0-0.1-0.1-0.2-0.1 c-0.1,0-0.1,0-0.2-0.1c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c0,0-0.1,0-0.1,0 c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0.1 c-0.1,0-0.1,0-0.2,0.1c-0.1,0-0.1,0.1-0.2,0.1c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0.1c0,0-0.1,0-0.1,0.1c0,0,0,0-0.1,0.1 c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1,0.1-0.2,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.2c0,0.1-0.1,0.1-0.1,0.2 c0,0.1-0.1,0.1-0.1,0.2c0,0,0,0.1-0.1,0.1c0,0,0,0.1,0,0.1c0,0.1-0.1,0.1-0.1,0.2c0,0.1-0.1,0.1-0.1,0.2c0,0.1,0,0.1-0.1,0.2 c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0.1,0,0.1,0,0.2 c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2 c0,0,0,0.1,0,0.1c0,0,0,0.1,0.1,0.1c0,0.1,0.1,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0,0,0,0.1,0.1 c0,0,0,0,0.1,0.1c0,0,0.1,0.1,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1c0,0,0.1,0,0.1,0.1s0.1,0,0.1,0 c0.1,0,0.1,0.1,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2,0.1c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0 c0.1,0,0.1,0,0.2,0C21.4,109.5,21.5,109.5,21.6,109.5C21.5,109.5,21.6,109.5,21.6,109.5z' fill='%233EBBC4'/%3E%3Cpath d='M121.7,71.1l-19.5-33.8L74.8,53.2l15.9-27.5L56.8,6.2L41,33.6V2H2v104.5c0,10.8,8.7,19.5,19.5,19.5l0,0H126 V87H94.3L121.7,71.1z M116.3,69.7L96.4,81.2L80.9,54.3l19.9-11.5L116.3,69.7z M77.4,56.3l15.5,26.8l-22.5,13L60.2,78.5l10.6-18.3 L77.4,56.3z M37,63v24H6V63H37z M6,59V33h31v26H6z M41,67.5l15.7,9L41,103.7V67.5z M57.9,82.5l9.1,15.7l-27.1,15.7L57.9,82.5z M65,103.9V122H33.7L65,103.9z M58.3,11.7l26.9,15.5L73.7,47.1L46.8,31.6L58.3,11.7z M44.8,35.1l26.9,15.5l-13,22.5L41,62.9V41.6 L44.8,35.1z M37,6v23H6V6H37z M6,106.5V91h31v15.5c0,8.5-7,15.5-15.5,15.5S6,115,6,106.5z M122,122H99V91h23V122z M95,91v31H69 v-20.4L87.3,91H95z' fill='%233EBBC4'/%3E%3C/g%3E%3C/svg%3E")
+
+
+  &_dev:after
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' enable-background='new 0 0 128 128' id='Слой_1' version='1.1' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M6,104H2c0,9.4,7.6,17,17,17h107V17H21V2h-2C9.6,2,2,9.6,2,19v85L6,104c0-7.2,5.8-13,13-13h2V21h101v96H19 C11.8,117,6,111.2,6,104z M17,87.1c-4.4,0.5-8.3,2.7-11,5.9V19c0-6.5,4.8-11.9,11-12.8V87.1z' fill='rgb(62, 187, 196)'/%3E%3Cpath d='M103,29H91v67.5l6,12l6-12V29z M99,33v11h-4V33H99z M97,99.5l-2-4V48h4v47.5L97,99.5z' fill='rgb(62, 187, 196)'/%3E%3Cpath d='M42,77v4h8L45,108.7l3.9,0.7L54,81H66l5.1,28.4l3.9-0.7L70,81h8v-4h-8.7L67,63.8c3.1-2.2,5-5.9,5-9.8 c0-5.9-4.3-10.9-10-11.8V29h-4v13.2c-5.7,1-10,5.9-10,11.8c0,3.9,1.9,7.5,5,9.8L50.7,77H42z M56.2,61c-2.6-1.4-4.2-4.1-4.2-7 c0-4.4,3.6-8,8-8s8,3.6,8,8c0,2.9-1.6,5.6-4.2,7l-1.3,0.7L65.3,77H54.7l2.7-15.3L56.2,61z' fill='rgb(62, 187, 196)'/%3E%3C/g%3E%3C/svg%3E")
+
+
+  &_customization:after
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' enable-background='new 0 0 128 128' id='Слой_1' version='1.1' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M6,104H2c0,9.4,7.6,17,17,17h107V17H21l0-15h-2C9.6,2,2,9.6,2,19v85L6,104c0-7.2,5.8-13,13-13h2l0-70h101 v96H19C11.8,117,6,111.2,6,104z M17,46.5c0,17.5,0,35,0,40.6c-4.4,0.5-8.3,2.7-11,5.9V19c0-6.5,4.8-11.9,11-12.8V46.5z' fill='%233EBBC4'/%3E%3Cpath d='M48,29l-0.5,0.3c-5.8,3.3-9.3,9.5-9.3,16.2c0,0.6,0,1.2,0.1,1.9c0,0.2,0.1,0.4,0.1,0.7 c0.1,0.4,0.1,0.8,0.2,1.1c0.1,0.3,0.1,0.5,0.2,0.8c0.1,0.3,0.2,0.7,0.3,1c0.1,0.3,0.2,0.6,0.3,0.8c0.1,0.3,0.2,0.6,0.3,0.8 c0.1,0.3,0.3,0.6,0.4,0.9c0.1,0.2,0.2,0.4,0.3,0.6c0.2,0.4,0.4,0.7,0.6,1.1c0.1,0.1,0.1,0.3,0.2,0.4c0.3,0.5,0.6,0.9,1,1.3 c0,0,0,0,0,0.1c0.5,0.7,1.1,1.3,1.7,1.9l0.9,1c2.3,2.4,4.1,9.1,4.1,13.4v29.6c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8V73.2 c0-4.3,1.7-11,4.1-13.4l0.9-1c0.6-0.6,1.2-1.2,1.7-1.9c0,0,0,0,0-0.1c0.3-0.4,0.6-0.9,0.9-1.3c0.1-0.1,0.2-0.3,0.2-0.4 c0.2-0.4,0.4-0.7,0.6-1.1c0.1-0.2,0.2-0.4,0.3-0.6c0.1-0.3,0.3-0.6,0.4-0.9c0.1-0.3,0.2-0.6,0.3-0.8c0.1-0.3,0.2-0.6,0.3-0.8 c0.1-0.3,0.2-0.6,0.3-1c0.1-0.3,0.1-0.5,0.2-0.8c0.1-0.4,0.1-0.8,0.2-1.2c0-0.2,0.1-0.4,0.1-0.7c0.1-0.6,0.1-1.2,0.1-1.9 c0,0,0,0,0,0h0h0c0-6.6-3.6-12.8-9.3-16.2L65.7,29h-3.2v15.5c-3.4,2.4-8,2.4-11.3,0V29H48z M60.8,73.2v29.6c0,2.2-1.8,4-4,4 s-4-1.8-4-4V73.2c0-2.6-0.6-6.5-1.8-10c1.8,0.6,3.8,0.9,5.8,0.9c2,0,4-0.3,5.8-0.9C61.4,66.7,60.8,70.6,60.8,73.2z M56.8,50.3 c3.1,0,6.3-1.1,8.8-3.2l0.9-0.4V34.4c3.1,2.8,5,6.8,5,11c0,0.5,0,1-0.1,1.5c0,0.2-0.1,0.4-0.1,0.5c0,0.3-0.1,0.6-0.1,0.9 c0,0.2-0.1,0.4-0.2,0.7c-0.1,0.2-0.1,0.5-0.2,0.7c-0.1,0.3-0.2,0.5-0.3,0.8c-0.1,0.2-0.1,0.4-0.2,0.5c-0.1,0.3-0.3,0.6-0.4,0.9 c-0.1,0.1-0.1,0.2-0.2,0.4c-0.2,0.4-0.4,0.7-0.6,1c0,0,0,0.1-0.1,0.1c-0.5,0.8-1.1,1.5-1.7,2.2L67,56c-2.6,2.5-6.2,4.1-10.1,4.1 c-3.9,0-7.5-1.6-10.1-4.1l-0.5-0.5c-0.6-0.7-1.2-1.4-1.7-2.2c0,0,0-0.1-0.1-0.1c-0.2-0.3-0.4-0.7-0.6-1.1c-0.1-0.1-0.1-0.2-0.2-0.4 c-0.1-0.3-0.3-0.6-0.4-0.9c-0.1-0.2-0.1-0.4-0.2-0.5c-0.1-0.3-0.2-0.5-0.3-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.1-0.4-0.2-0.7 c-0.1-0.3-0.1-0.6-0.1-0.9c0-0.2-0.1-0.4-0.1-0.5c0-0.5-0.1-1-0.1-1.5c0-4.2,1.9-8.3,5-11v11.9l0.7,0.6 C50.4,49.2,53.6,50.3,56.8,50.3z' fill='%233EBBC4'/%3E%3Cpath d='M82.6,77l-1.1,0.6v24.6c0,4.8,3.9,8.7,8.7,8.7c4.8,0,8.7-3.9,8.7-8.7V77.5L97.7,77c-0.9-0.4-1-1.2-1-1.5 s0.1-1.1,1-1.5l1.1-0.6v-6.6h-6.7V37.4h-4v29.3h-6.7v6.6l1.1,0.6c0.9,0.4,1,1.2,1,1.5S83.5,76.5,82.6,77z M85.5,79.8 c1.3-1.1,2.1-2.7,2.1-4.4s-0.8-3.3-2.1-4.4v-0.3h9.3V71c-1.3,1.1-2.1,2.7-2.1,4.4s0.8,3.3,2.1,4.4v22.3c0,2.6-2.1,4.7-4.7,4.7 s-4.7-2.1-4.7-4.7V79.8z' fill='%233EBBC4'/%3E%3Crect fill='%233EBBC4' height='5.4' width='5' x='87.7' y='29'/%3E%3C/g%3E%3C/svg%3E")
+
+
+  &_learn:after
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;stroke:rgb(62, 187, 196);stroke-linecap:round;stroke-linejoin:round;%7D%3C/style%3E%3C/defs%3E%3Ctitle/%3E%3Crect class='a' height='17' rx='1' ry='1' width='23' x='0.5' y='2'/%3E%3Cline class='a' x1='7' x2='17' y1='22' y2='22'/%3E%3Cline class='a' x1='10.5' x2='10.5' y1='19' y2='22'/%3E%3Cline class='a' x1='13.5' x2='13.5' y1='19' y2='22'/%3E%3Cpath class='a' d='M12.894,11.331,18.428,8.96a.5.5,0,0,0,0-.92L12.894,5.669a1,1,0,0,0-.788,0L5.5,8.5l6.606,2.831A1,1,0,0,0,12.894,11.331Z'/%3E%3Cpath class='a' d='M8.5,9.786v3.405a.5.5,0,0,0,.276.447l3.277,1.638a1,1,0,0,0,.894,0l3.277-1.638a.5.5,0,0,0,.276-.447V9.786'/%3E%3Cline class='a' x1='5.5' x2='5.5' y1='8.5' y2='12'/%3E%3Cpath class='a' d='M5.5,12,4.127,15.662A.249.249,0,0,0,4.361,16H6.639a.249.249,0,0,0,.234-.338L5.5,12'/%3E%3C/svg%3E")
+
+
+  &_secure:after
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Layer_1' x='0px' y='0px' width='24px' height='24px' viewBox='0 0 24 24' enable-background='new 0 0 24 24' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath fill='rgb(62, 187, 196)' d='M9.645,13.881c0,0-0.336,0.863-0.334,0.867l0.533,0.758h1.178l0.535-0.758 c-0.004-0.014-0.334-0.867-0.334-0.867C11.184,13.887,9.684,13.887,9.645,13.881z M6.611,8.844c0.688,2.01,1.98,3.538,3.822,3.538 c1.775,0,3.088-1.506,3.797-3.513c1.434-1.445,1.096-2.525,0.766-3.041C15.773,2.102,13.395,0,10.299,0 C4.75,0,5.717,6.08,5.717,6.08c0.006,0.001,0.014,0.001,0.02,0.002C5.482,6.654,5.408,7.616,6.611,8.844z M8.928,4.33L8.523,5.839 c1.98-0.604,2.246-0.936,2.559-1.163c0.324-0.235,0.598-0.474,0.82-0.691c0.102,0.184,0.23,0.352,0.379,0.504 c0.146,0.154,0.363-1.397,0.363-1.397s0.547,0.942,0.623,1.247c0.055,0.216,0.4,1.09,0.586,1.17c-0.068,2.885-1.363,5.9-3.42,5.9 c-1.914,0-3.168-2.615-3.389-5.305C7.57,6.072,8.928,4.33,8.928,4.33z M17.331,17.58c-0.743,0-1.348-0.604-1.348-1.348v-3.746 l-2.206-0.813l-0.369,0.9l0.779,0.287l-2.842,9.375l-0.357-6.295H9.881l-0.354,6.18l-2.811-9.273l0.748-0.273l-0.373-0.899 l-2.758,1.015l-0.035,0.015c-0.035,0.017-2.664,1.267-3.814,4.295C0.25,17.616,0.078,18.307,0,19.076 C2.475,22.08,6.227,23.998,10.426,24h0.02c0.227,0,0.451-0.006,0.676-0.018h0.014c3.918-0.201,7.395-2.068,9.734-4.908 c-0.055-0.541-0.169-1.029-0.307-1.494H17.331z M16.707,20.161c-1.154,0.463-2.34,0.545-3.023,0.545 c-0.23,0-0.402-0.011-0.5-0.017v-0.58c0.031,0.002,1.994,0.232,3.523-0.555V20.161z M23.652,11.802h-0.465v-1.545 c0-0.771-0.293-1.477-0.774-1.991C21.932,7.75,21.248,7.419,20.49,7.42c-0.755-0.001-1.44,0.33-1.921,0.846 c-0.483,0.515-0.776,1.221-0.776,1.991v1.545h-0.462c-0.193,0-0.348,0.154-0.348,0.347v4.084c0,0.191,0.154,0.348,0.348,0.348 h6.321c0.19,0,0.348-0.156,0.348-0.348v-4.084C24,11.956,23.843,11.802,23.652,11.802z M20.779,14.073v0.76 c0,0.121-0.099,0.22-0.219,0.22h-0.14c-0.121,0-0.218-0.099-0.218-0.22v-0.76c-0.159-0.098-0.266-0.27-0.266-0.47 c0-0.307,0.248-0.554,0.553-0.554c0.306,0,0.556,0.247,0.556,0.554C21.046,13.804,20.939,13.976,20.779,14.073z M21.906,11.802 h-2.832v-1.545c0-0.444,0.171-0.838,0.43-1.118c0.264-0.277,0.606-0.439,0.986-0.439c0.381,0,0.723,0.162,0.986,0.439 c0.262,0.28,0.43,0.674,0.43,1.118V11.802z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+
+
+  &_layout:after
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' enable-background='new 0 0 128 128' id='Слой_1' version='1.1' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M2,106h47.5v16H24v4h80v-4H78.5v-16H126V2H2V106z M74.5,122h-21v-16h21V122z M6,102V91h116v11H6z M122,6v81 H6V6H122z' fill='%233EBBC4'/%3E%3Cpolygon fill='%233EBBC4' points='96,33 70.5,33 70.5,32 66.5,32 66.5,37 92,37 92,72 70.5,72 70.5,45.5 66.5,45.5 66.5,72 38.2,72 38.2,37 55.5,37 55.5,31.2 51.5,31.2 51.5,33 38.2,33 38.2,22 66.5,22 66.5,23 70.5,23 70.5,18 34.2,18 34.2,76 96,76 '/%3E%3C/g%3E%3C/svg%3E")
+
+
+  &_start:after
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' enable-background='new 0 0 128 128' id='Слой_1' version='1.1' viewBox='0 0 128 128' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M64,2H49.5v12c-3.7,1.1-7.2,2.5-10.6,4.4l-8.5-8.5L9.9,30.4l8.5,8.5c-1.9,3.4-3.3,6.9-4.4,10.6H2v29h12 c1.1,3.7,2.5,7.2,4.4,10.6l-8.5,8.5l20.5,20.5l8.5-8.5c3.4,1.9,6.9,3.3,10.6,4.4v12H64c34.2,0,62-27.8,62-62S98.2,2,64,2z M64,122 H53.5v-11.1l-1.5-0.4c-4.3-1.1-8.5-2.8-12.4-5.1l-1.3-0.8l-7.9,7.9L15.6,97.6l7.9-7.9l-0.8-1.3c-2.3-3.9-4-8.1-5.1-12.4l-0.4-1.5H6 v-21h11.1l0.4-1.5c1.1-4.3,2.8-8.5,5.1-12.4l0.8-1.3l-7.9-7.9l14.8-14.8l7.9,7.9l1.3-0.8c3.9-2.3,8.1-4,12.4-5.1l1.5-0.4V6H64 c32,0,58,26,58,58S96,122,64,122z' fill='%23FFF'/%3E%3Cpolygon fill='%23FFF' points='91.6,33.6 64,61.2 58.3,55.5 55.5,58.3 61.2,64 55.5,69.7 58.3,72.5 64,66.8 81,83.8 83.8,81 66.8,64 94.4,36.4 '/%3E%3Cpath d='M64,92c-15.4,0-28-12.6-28-28s12.6-28,28-28v-4c-17.6,0-32,14.4-32,32s14.4,32,32,32V92z' fill='%23FFF'/%3E%3Crect fill='%23fff' height='3.3' width='4' x='62' y='22.3'/%3E%3Crect fill='%23FFF' height='4' width='3.3' x='102.3' y='62'/%3E%3Crect fill='%23FFF' height='3.3' width='4' x='62' y='102.3'/%3E%3C/g%3E%3C/svg%3E")
+
+
+  &_support:after
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' viewBox='0 0 456.521 456.521' style='enable-background:new 0 0 456.521 456.521;' fill='rgb(62, 187, 196)' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M128.347,456.521c-14.051,0-22.747-2.888-23.562-3.168c-6.801-2.357-10.536-9.665-8.459-16.561l21.03-69.826 c-61.909-36.053-99.917-99.725-99.917-168.663C17.439,88.961,112.013,0,228.26,0s210.821,88.961,210.821,198.303 c0,106.942-88.3,193.449-201.523,198.058c-1.724,0.343-3.553,0.343-5.41-0.084l-0.657-0.147 c-6.602-1.483-11.071-7.651-10.421-14.386c0.647-6.742,6.211-11.938,12.977-12.134c99.914-2.881,178.178-78.128,178.178-171.306 c0-94.535-82.527-171.446-183.965-171.446S44.295,103.767,44.295,198.303c0,62.427,36.487,119.979,95.221,150.192 c5.511,2.832,8.365,9.071,6.906,15.1c-0.122,0.504-0.273,0.993-0.448,1.476l-19.481,64.686 c13.802,0.266,37.613-3.077,65.791-24.143c5.934-4.434,14.358-3.224,18.792,2.714c4.441,5.945,3.228,14.358-2.714,18.799 C176.101,451.248,147.339,456.521,128.347,456.521z'/%3E%3Cpath d='M228.26,143.786H109.184c-5.934,0-10.742-4.812-10.742-10.742c0-5.931,4.808-10.742,10.742-10.742H228.26 c5.934,0,10.742,4.812,10.742,10.742C239.003,138.974,234.195,143.786,228.26,143.786z'/%3E%3Cpath d='M228.26,210.199H109.184c-5.934,0-10.742-4.812-10.742-10.743c0-5.931,4.808-10.742,10.742-10.742H228.26 c5.934,0,10.742,4.812,10.742,10.742C239.003,205.387,234.195,210.199,228.26,210.199z'/%3E%3Cpath d='M228.26,276.612H109.184c-5.934,0-10.742-4.812-10.742-10.742s4.808-10.742,10.742-10.742H228.26 c5.934,0,10.742,4.812,10.742,10.742S234.195,276.612,228.26,276.612z'/%3E%3Cg%3E%3Cpath d='M292.694,165.268c0,1.508-0.292,2.913-0.87,4.21c-0.584,1.303-1.357,2.448-2.313,3.437 c-0.962,0.994-2.092,1.767-3.389,2.313c-1.303,0.551-2.708,0.822-4.21,0.822c-3.081,0-5.632-1.027-7.653-3.081 c-2.016-2.054-3.027-4.621-3.027-7.702c0-6.842,1.319-13.279,3.956-19.306c2.632-6.021,6.21-11.296,10.728-15.814 c4.518-4.518,9.788-8.075,15.814-10.68c6.021-2.6,12.425-3.902,19.203-3.902c6.777,0,13.177,1.335,19.203,4.005 c6.021,2.67,11.296,6.264,15.814,10.782s8.096,9.793,10.728,15.814c2.638,6.026,3.956,12.393,3.956,19.1 c0,13.555-4.897,25.332-14.685,35.325l-16.122,14.89c-5.48,5.48-8.215,11.469-8.215,17.971c0,3.081-1.011,5.632-3.027,7.648 c-2.021,2.021-4.572,3.032-7.653,3.032s-5.648-1.011-7.702-3.032c-2.054-2.016-3.081-4.567-3.081-7.648 c0-12.323,4.891-23.375,14.685-33.169l16.122-14.993c5.475-5.68,8.215-12.355,8.215-20.024c0-3.832-0.757-7.459-2.259-10.885 c-1.508-3.421-3.54-6.415-6.113-8.988c-2.562-2.562-5.561-4.599-8.983-6.107c-3.427-1.503-7.053-2.259-10.885-2.259 c-3.902,0-7.567,0.735-10.988,2.205c-3.427,1.475-6.415,3.481-8.988,6.01c-2.562,2.535-4.583,5.513-6.053,8.934 C293.429,157.604,292.694,161.301,292.694,165.268z'/%3E%3Cpath d='M335.515,266.969c0,4.043-1.421,7.48-4.259,10.323c-2.843,2.837-6.286,4.259-10.323,4.259 c-4.043,0-7.48-1.421-10.323-4.259c-2.837-2.843-4.259-6.28-4.259-10.323c0-4.037,1.421-7.48,4.259-10.323 c2.843-2.837,6.28-4.259,10.323-4.259c4.037,0,7.48,1.421,10.323,4.259C334.094,259.488,335.515,262.931,335.515,266.969z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E")
+
+
+.section-header
+  color: rgb(62, 187, 196)
+  font-weight: 400
+  font-size: 1.4em
+
+
+.steps
+  &-timeline
+    position: relative
+    gap: 50px
+    margin-bottom: 50px
+
+    &:before
+      @include absolute-item
+      background: linear-gradient(225deg, #38d61c, #9e9e9e)
+      width: 100%
+      height: 2px
+      bottom: 80px
+
+    &:after
+      content: ""
+      display: table
+      clear: both
+
+
+  &-name
+    font-size: 1em
+    margin: 5px 0 0
+    height: 50px
+    text-align: center
+    color: $dark-blue-color
+    text-transform: uppercase
+
+    &_reversed
+      transform: translate(0,-110px)
+
+.step
+  margin-top: -50px
+
+
+.copyright
+  font-size: 0.7em
+
+@media (min-width: 2000px)
+  .banner svg
+    top: -21%
+
+  .banner_reversed svg
+    top: auto
+    bottom: -8%
+
+
+@media (max-width: 1000px)
+  .wrapper_dark
+    display: none
+
+
+@media screen and (max-width: 960px)
+  html, body
+    margin: 0
+    overflow-x: hidden
+
+  .contacts-link__wrap_header
+    margin-right: 15px
+
+  .container
+    padding-left: 40px
+    padding-right: 40px
+
+
+  .info, .info_reversed
+    width: 100%
+
+
+  .w-50
+    width: 80%
+
+
+  .info
+    flex-direction: column
+    padding: 5px 0 10px
+
+
+  .info_reversed
+    flex-direction: column-reverse
+
+
+  .header-nav, .head-window__btn
+    display: none
+
+  #menu-btn
+    display: block
+
+
+  .buy-card__wrap
+    grid-template-columns: auto
+
+
+  .form, .buy-card__wrap
+    margin: 0 auto
+    width: 60%
+
+
+  .buy-card__btn_500
+    width: 100%
+
+
+  .site, .devices, .bitrix
+    height: 140px
+    background-size: 100%
+
+  .string
+    top: 26%
+    height: 40rem
+
+  .string_reversed
+    top: 27%
+    height: 40rem
+
+
+
+@media(max-width: 900px)
+  .head-window
+    background: url("../img/progress-1.svg") no-repeat left -35px top 35px
+
+  .pt-80-pb-20
+    padding-top: 0
+
+  .steps-timeline
+    margin-left: 25px
+    flex-direction: column
+    gap: 50px
+    margin-bottom: 50px
+
+    &:before
+      height: 100%
+      width: 2px
+      top: 0
+      background: linear-gradient(225deg,#9e9e9e,#38d61c)
+
+
+  .steps-name_reversed
+    transform: none
+
+
+  .step
+    margin-top: 0
+
+
+  .steps-name
+    height: auto
+
+
+  .steps-name
+    padding-left: 50px
+
+
+  .timeline-item:after
+    left: -127px
+    top: 40px
+
+
+  .timeline-item:before
+    width: 60px
+    height: 60px
+    left: -135px
+    top: 32px
+
+
+  .main-span
+    font-size: 30px
+
+
+  .main-ul
+    padding-left: 40px
+
+
+  .main-info, .main-card__wrap
+    margin-bottom: 30px
+
+
+  .p-b-100
+    padding-bottom: 55px
+
+
+  .pt-p-b-80
+    padding-top: 40px
+    padding-bottom: 40px
+
+
+  .faq
+    width: 100%
+
+
+  .string
+    top: 45%
+    height: 60rem
+
+  .string_reversed
+    top: 41%
+    height: 67rem
+
+
+@media (max-width: 739px) and (min-width: 550px)
+  .buy-card
+    width: 70%
+    margin: 0 auto
+
+@media (max-width: 750px)
+  .form, .buy-card__wrap, .w-50
+    width: 100%
+
+
+@media (max-width: 640px)
+  .container
+    padding-left: 30px
+    padding-right: 30px
+
+
+  .main-h2, .main-h2__signature, .main-h2__wrap_end
+    text-align: center
+
+  .console-container span
+    font-size: 2.3rem
+
+
+
+@media (max-width: 550px)
+  .main-h2__signature,  .faq__p, .main-li
+    font-size: 13px
+
+  .main-card__text
+    font-size: 18px
+
+  .main-h2
+    font-size: 25px
+  .buy-card
+    padding: 15px
+  .container
+    padding-left: 15px
+    padding-right: 15px
+
+  .head-window
+    background: url(../img/progress-1.svg) no-repeat left -88px top 35px
+    background-size: cover
+
+  .contacts-link_phone,
+  .contacts-link__wrap_header .contacts-link__svg_phone
+    display: none
+
+  .contacts_abs
+    right: 5px
+
+  .site, .devices
+    position: absolute
+    z-index: 1
+
+  .main-span
+    z-index: 2
+
+  .bitrix, .form
+    width: 100%
+
+  .footer-content
+    flex-direction: column
+    margin-bottom: 10px
+
+  .header-slogan
+    font-size: 0.7em
+
+    &__bitrix
+      width: 100px
+      margin-left: 10px
+
+  .logo_footer
+    margin-right: 0
+
+  .main-card__wrap
+    grid-template-columns: auto
+    padding: 0
+    grid-template-rows: repeat(4,200px)
+
+  .main-info
+    padding-left: 25px
+
+  .main-info_n-p
+    padding-left: 0
+
+    &_faq
+      padding: 0
+
+  .faq__text
+    padding: 10px
+
+
+  .steps-timeline
+    margin-right: auto
+
+  .faq__span
+    font-size: 1rem
+
+  .contacts-link__svg_mail, .contacts-link__svg_tg, .contacts-link__svg_phone
+    width: 28px
+    height: 28px
+
+
+
+@media (max-width: 350px)
+  .console-container span
+    font-size: 2rem
+
+  .faq__span
+    font-size: 0.8rem
+
+  .main-card__text
+    font-size: 14px
+
+
+
