@@ -297,12 +297,12 @@ section.wrapper_cube.flex.column.a-i-center
                 .flex.w-100
                     img.main-img(src='img/envelope-1.svg' alt='img')
                 .flex
-                    form.flex.column.form.t-a-c
+                    form.flex.column.form.t-a-c(action="https://formspree.io/f/mnqloorg" method="POST")
                         h2.main-h2 Поговорим о проекте
-                        input.form__input(type='text' placeholder='Имя' required='')
-                        input.form__input(type='number' placeholder='Телефон' required='')
-                        input.form__input(type='email' placeholder='email' required='')
-                        textarea.form__textarea(rows='5' placeholder='Расскажите о проекте')
+                        input.form__input(type='text' name="name"  placeholder='Имя' required='')
+                        input.form__input(type='number' name="phone" placeholder='Телефон' required='')
+                        input.form__input(type='email'  name="_replyto" placeholder='email' required='')
+                        textarea.form__textarea(rows='5' name="message" placeholder='Расскажите о проекте')
                         button.btn.buy-card__btn.buy-card__btn_500.relative.m-0-a(type='submit')
                             | Оставить
                             | заявку
